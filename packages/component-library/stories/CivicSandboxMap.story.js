@@ -54,7 +54,7 @@ const dataURLs = [
   'https://gist.githubusercontent.com/mendozaline/b3a75b40c9a60781b6adc77cebb9b400/raw/11dd037d964b0b444cafdc060691a219deebdf21/016-points-interest.json',
 ];
 
-export default () => storiesOf(displayName, module)
+export default () => storiesOf('Maps/CIVIC Sandbox Map', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .add('Simple usage', () => (
@@ -100,7 +100,7 @@ export default () => storiesOf(displayName, module)
           const screenGridcolorSchemeArray = JSON.parse(screenGridcolorScheme);
 
           const propertyValueGetColor = f => {
-            const propertyValue = parseFloat(f.properties.prop_value); 
+            const propertyValue = parseFloat(f.properties.prop_value);
             return propertyValue < 250000 ? colorSchemeArray[0] :
               propertyValue < 500000 ? colorSchemeArray[1] :
               propertyValue < 750000 ? colorSchemeArray[2] :
@@ -113,7 +113,7 @@ export default () => storiesOf(displayName, module)
           };
 
           const populationGetColor = f => {
-            const population = parseFloat(f.properties.total_population); 
+            const population = parseFloat(f.properties.total_population);
             return population < 3000 ? colorSchemeArray[0] :
               population < 8000 ? colorSchemeArray[1] :
               population < 12000 ? colorSchemeArray[2] :
@@ -126,7 +126,7 @@ export default () => storiesOf(displayName, module)
           };
 
           const householdChildrenGetColor = f => {
-            const householdChildren = parseFloat(f.properties.pc_household_with_children_under_18); 
+            const householdChildren = parseFloat(f.properties.pc_household_with_children_under_18);
             return householdChildren < 0.04 ? colorSchemeArray[0] :
               householdChildren < 0.08 ? colorSchemeArray[1] :
               householdChildren < 0.12 ? colorSchemeArray[2] :

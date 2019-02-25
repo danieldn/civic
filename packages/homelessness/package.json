@@ -43,7 +43,7 @@
     "leaflet": "^1.0.3",
     "query-string": "^4.3.3",
     "ramda": "^0.23.0",
-    "react": "^15.5.3",
+    "react": "16.8.3",
     "react-dom": "^15.5.3",
     "react-helmet": "^5.0.3",
     "react-leaflet": "^1.1.6",
